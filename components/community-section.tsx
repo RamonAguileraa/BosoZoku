@@ -37,7 +37,8 @@ export default function CommunitySection() {
             <h3 className="text-2xl font-bold mb-6 text-amber-300">Follow Us</h3>
             <div className="grid grid-cols-2 gap-4">
               <Link
-                href="#"
+                href="https://discord.gg/bosozoku"
+                target="_blank"
                 className="flex items-center p-4 bg-black/30 rounded-lg hover:bg-amber-500/10 transition-colors"
               >
                 <Discord className="h-8 w-8 mr-4 text-amber-400" />
@@ -47,27 +48,30 @@ export default function CommunitySection() {
                 </div>
               </Link>
               <Link
-                href="#"
+                href="https://www.instagram.com/bosozoku.studio/"
+                target="_blank"
                 className="flex items-center p-4 bg-black/30 rounded-lg hover:bg-amber-500/10 transition-colors"
               >
                 <Instagram className="h-8 w-8 mr-4 text-amber-400" />
                 <div>
                   <p className="font-bold text-white">Instagram</p>
-                  <p className="text-sm text-gray-400">@TibucamiGame</p>
+                  <p className="text-sm text-gray-400">@bosozoku.studio</p>
                 </div>
               </Link>
               <Link
-                href="#"
+                href="https://www.youtube.com/@BosoZokuStudio"
+                target="_blank"
                 className="flex items-center p-4 bg-black/30 rounded-lg hover:bg-amber-500/10 transition-colors"
               >
                 <Youtube className="h-8 w-8 mr-4 text-amber-400" />
                 <div>
                   <p className="font-bold text-white">YouTube</p>
-                  <p className="text-sm text-gray-400">BosoZoku Studio</p>
+                  <p className="text-sm text-gray-400">@BosoZokuStudio</p>
                 </div>
               </Link>
               <Link
-                href="#"
+                href="https://www.tiktok.com/@bosozoku.studio"
+                target="_blank"
                 className="flex items-center p-4 bg-black/30 rounded-lg hover:bg-amber-500/10 transition-colors"
               >
                 <svg className="h-8 w-8 mr-4 text-amber-400" viewBox="0 0 24 24" fill="currentColor">
@@ -75,7 +79,7 @@ export default function CommunitySection() {
                 </svg>
                 <div>
                   <p className="font-bold text-white">TikTok</p>
-                  <p className="text-sm text-gray-400">@TibucamiGame</p>
+                  <p className="text-sm text-gray-400">@bosozoku.studio</p>
                 </div>
               </Link>
             </div>
