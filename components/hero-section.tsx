@@ -33,10 +33,10 @@ export default function HeroSection() {
           className="absolute top-1/4 left-1/4 w-32 h-32 rounded-full border border-amber-500/30"
           animate={{
             y: [0, -20, 0],
-            opacity: [0.5, 0.8, 0.5],
+            opacity: [1, 1.5, 7],
           }}
           transition={{
-            duration: 5,
+            duration: 8,
             repeat: Number.POSITIVE_INFINITY,
             ease: "easeInOut",
           }}

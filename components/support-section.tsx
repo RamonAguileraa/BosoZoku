@@ -8,8 +8,16 @@ import Link from "next/link"
 export default function SupportSection() {
   return (
     <section id="support" className="relative py-24 bg-gradient-to-b from-gray-900 to-black">
+        <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="absolute top-6 left-0 right-0 mx-auto w-fit bg-amber-500/90 text-black px-6 py-2 rounded-full text-sm font-bold shadow-md backdrop-blur-md z-20 text-center"
+      >
+        Coming Soon
+      </motion.div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(139,69,19,0.2),rgba(0,0,0,0))]" />
-
+     
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -26,13 +26,13 @@ export default function CommunitySection() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto mb-16">
+        <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-black/40 backdrop-blur-sm border border-amber-900/30 rounded-xl p-8"
+            className="bg-black/40 backdrop-blur-sm border border-amber-900/30 rounded-xl p-8 text-center"
           >
             <h3 className="text-2xl font-bold mb-6 text-amber-300">Follow Us</h3>
             <div className="grid grid-cols-2 gap-4">
@@ -44,16 +44,6 @@ export default function CommunitySection() {
                 <div>
                   <p className="font-bold text-white">Discord</p>
                   <p className="text-sm text-gray-400">Join our server</p>
-                </div>
-              </Link>
-              <Link
-                href="#"
-                className="flex items-center p-4 bg-black/30 rounded-lg hover:bg-amber-500/10 transition-colors"
-              >
-                <Twitter className="h-8 w-8 mr-4 text-amber-400" />
-                <div>
-                  <p className="font-bold text-white">Twitter</p>
-                  <p className="text-sm text-gray-400">@TibucamiGame</p>
                 </div>
               </Link>
               <Link
@@ -76,46 +66,22 @@ export default function CommunitySection() {
                   <p className="text-sm text-gray-400">BosoZoku Studio</p>
                 </div>
               </Link>
+              <Link
+                href="#"
+                className="flex items-center p-4 bg-black/30 rounded-lg hover:bg-amber-500/10 transition-colors"
+              >
+                <svg className="h-8 w-8 mr-4 text-amber-400" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                </svg>
+                <div>
+                  <p className="font-bold text-white">TikTok</p>
+                  <p className="text-sm text-gray-400">@TibucamiGame</p>
+                </div>
+              </Link>
             </div>
           </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="bg-black/40 backdrop-blur-sm border border-amber-900/30 rounded-xl p-8"
-          >
-            <h3 className="text-2xl font-bold mb-6 text-amber-300">Newsletter</h3>
-            <p className="text-gray-300 mb-6">
-              Subscribe to our newsletter for exclusive development updates, behind-the-scenes content, and early access
-              opportunities.
-            </p>
-            <form className="space-y-4">
-              <div>
-                <Input
-                  type="text"
-                  placeholder="Your name"
-                  className="bg-black/30 border-amber-900/50 focus:border-amber-500/50 text-white"
-                />
-              </div>
-              <div>
-                <Input
-                  type="email"
-                  placeholder="Your email"
-                  className="bg-black/30 border-amber-900/50 focus:border-amber-500/50 text-white"
-                />
-              </div>
-              <Button type="submit" className="w-full bg-amber-500 text-black hover:bg-amber-600">
-                Subscribe
-              </Button>
-              <p className="text-xs text-gray-400 text-center">
-                We respect your privacy and will never share your information.
-              </p>
-            </form>
-          </motion.div>
         </div>
-
+<br />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -125,16 +91,12 @@ export default function CommunitySection() {
         >
           <h3 className="text-2xl font-bold mb-4 text-amber-300">Upcoming Events</h3>
           <div className="bg-black/30 backdrop-blur-sm border border-amber-900/20 rounded-xl p-6 mb-6">
-            <p className="text-amber-400 font-bold mb-2">PAX East 2025</p>
+            <p className="text-amber-400 font-bold mb-2">Showcase Ludic Jam 2025 Exhibition</p>
             <p className="text-gray-300">
-              Come play the Tibucami demo at our booth! Meet the team and get exclusive merch.
+              Come play the Tibucami demo at our booth!.
             </p>
-            <p className="text-sm text-gray-400 mt-2">Boston, MA - June 12-15, 2025</p>
+            <p className="text-sm text-gray-400 mt-2">Gimnasio - Tec de Monterrey - may 17-15, 2025</p>
           </div>
-          <p className="text-gray-400">
-            Want to see Tibucami at an event near you?{" "}
-            <span className="text-amber-400 hover:underline cursor-pointer">Let us know!</span>
-          </p>
         </motion.div>
       </div>
     </section>
