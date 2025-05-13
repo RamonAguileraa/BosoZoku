@@ -30,44 +30,43 @@ export default function AboutGame() {
           transition={{ duration: 0.6 }}
           className="max-w-4xl mx-auto text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-amber-400">About the Game</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-amber-400">Sobre el Juego</h2>
           <p className="text-lg text-gray-300 mb-8">
-            <span className="text-amber-300 font-semibold">Tibucami</span> is a 3D action-adventure game inspired by
-            Rarámuri mythology and crafted with a unique stop-motion clay aesthetic. Journey through mystical landscapes
-            as you uncover ancient secrets, master spiritual abilities, and restore balance to a world on the edge of
-            chaos.
+            <span className="text-amber-300 font-semibold">Tibucami</span> es un juego de acción y aventura en 3D inspirado en
+            la mitología Rarámuri y creado con una estética única de arcilla en stop-motion. Viaja a través de paisajes místicos
+            mientras descubres secretos ancestrales, dominas habilidades espirituales y restauras el equilibrio a un mundo al borde
+            del caos.
           </p>
           <p className="text-lg text-gray-300">
-            With intuitive controls, breathtaking environments, and a deeply emotional narrative, Tibucami invites
-            players to experience a handcrafted world unlike any other.
+            Con controles intuitivos, entornos impresionantes y una narrativa profundamente emotiva, Tibucami invita a los
+            jugadores a experimentar un mundo artesanal como ningún otro.
           </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-        <motion.div
-  initial={{ opacity: 0, x: -20 }}
-  whileInView={{ opacity: 1, x: 0 }}
-  viewport={{ once: true }}
-  transition={{ duration: 0.6 }}
-  className="relative aspect-video bg-black/50 rounded-lg overflow-hidden group cursor-pointer"
-  onClick={() => setVideoOpen(true)}
->
-<div className="relative aspect-video">
-  <video
-    src="/bosozokuvid.mp4"
-    className="w-full h-full"
-    controls
-    autoPlay
-    playsInline
-  />
-</div>
-  <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/30 transition-colors">
-    <div className="h-16 w-16 rounded-full bg-amber-500 flex items-center justify-center group-hover:scale-110 transition-transform">
-      <Play className="h-8 w-8 text-black" />
-    </div>
-  </div>
-</motion.div>
-
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="relative aspect-video bg-black/50 rounded-lg overflow-hidden group cursor-pointer"
+            onClick={() => setVideoOpen(true)}
+          >
+            <div className="relative aspect-video">
+              <video
+                src="/bosozokuvid.mp4"
+                className="w-full h-full"
+                controls
+                autoPlay
+                playsInline
+              />
+            </div>
+            <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/30 transition-colors">
+              <div className="h-16 w-16 rounded-full bg-amber-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Play className="h-8 w-8 text-black" />
+              </div>
+            </div>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, x: 20 }}
@@ -75,32 +74,32 @@ export default function AboutGame() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-2xl font-bold mb-4 text-amber-300">Game Features</h3>
+            <h3 className="text-2xl font-bold mb-4 text-amber-300">Características del Juego</h3>
             <ul className="space-y-4">
               <li className="flex items-start">
                 <div className="h-6 w-6 rounded-full bg-amber-500 mt-1 mr-3 flex-shrink-0" />
                 <div>
-                  <h4 className="font-bold text-white">Unique Clay Aesthetic</h4>
+                  <h4 className="font-bold text-white">Estética Única de Arcilla</h4>
                   <p className="text-gray-300">
-                    Experience a world crafted with stop-motion inspired visuals that bring the clay to life.
+                    Experimenta un mundo creado con visuales inspirados en stop-motion que dan vida a la arcilla.
                   </p>
                 </div>
               </li>
               <li className="flex items-start">
                 <div className="h-6 w-6 rounded-full bg-amber-500 mt-1 mr-3 flex-shrink-0" />
                 <div>
-                  <h4 className="font-bold text-white">Spiritual Powers</h4>
+                  <h4 className="font-bold text-white">Poderes Espirituales</h4>
                   <p className="text-gray-300">
-                    Harness ancient abilities to solve puzzles, defeat enemies, and traverse the mystical landscape.
+                    Domina habilidades ancestrales para resolver acertijos, derrotar enemigos y atravesar el paisaje místico.
                   </p>
                 </div>
               </li>
               <li className="flex items-start">
                 <div className="h-6 w-6 rounded-full bg-amber-500 mt-1 mr-3 flex-shrink-0" />
                 <div>
-                  <h4 className="font-bold text-white">Rich Mythology</h4>
+                  <h4 className="font-bold text-white">Rica Mitología</h4>
                   <p className="text-gray-300">
-                    Immerse yourself in a story inspired by authentic Rarámuri legends and cultural elements.
+                    Sumérgete en una historia inspirada en auténticas leyendas y elementos culturales Rarámuri.
                   </p>
                 </div>
               </li>
@@ -114,7 +113,7 @@ export default function AboutGame() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h3 className="text-2xl font-bold mb-6 text-center text-amber-300">Screenshots</h3>
+          <h3 className="text-2xl font-bold mb-6 text-center text-amber-300">Capturas de Pantalla</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {screenshots.map((src, index) => (
               <motion.div
@@ -128,7 +127,7 @@ export default function AboutGame() {
               >
                 <Image
                   src={src || "/placeholder.svg"}
-                  alt={`Tibucami Screenshot ${index + 1}`}
+                  alt={`Captura de Tibucami ${index + 1}`}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
@@ -146,40 +145,40 @@ export default function AboutGame() {
         </motion.div>
       </div>
 
-      {/* Video Dialog */}
+      {/* Diálogo del Video */}
       <Dialog open={videoOpen} onOpenChange={setVideoOpen}>
-      <DialogContent className="max-w-4xl p-0 bg-black border-amber-900/50">
-      <DialogTitle className="sr-only">Tibucami Game Trailer</DialogTitle>
+        <DialogContent className="max-w-4xl p-0 bg-black border-amber-900/50">
+          <DialogTitle className="sr-only">Tráiler de Tibucami</DialogTitle>
 
-       <div className="relative aspect-video">
-        <video
-          src="/bosozokuvid.mp4"
-          className="w-full h-full"
-          controls
-          playsInline
-        />
-       </div>
+          <div className="relative aspect-video">
+            <video
+              src="/bosozokuvid.mp4"
+              className="w-full h-full"
+              controls
+              playsInline
+            />
+          </div>
 
-  <Button
-    variant="ghost"
-    size="icon"
-    className="absolute top-2 right-2 text-white hover:bg-black/50"
-    onClick={() => setVideoOpen(false)}
-  >
-    <X className="h-6 w-6" />
-  </Button>
-</DialogContent>
+          <Button
+            variant="ghost"
+            size="icon"
+            className="absolute top-2 right-2 text-white hover:bg-black/50"
+            onClick={() => setVideoOpen(false)}
+          >
+            <X className="h-6 w-6" />
+          </Button>
+        </DialogContent>
       </Dialog>
 
-      {/* Image Lightbox */}
+      {/* Visor de Imágenes */}
       <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
         <DialogContent className="max-w-7xl p-0 bg-black border-amber-900/50">
-          <DialogTitle className="sr-only">Tibucami Screenshot</DialogTitle>
+          <DialogTitle className="sr-only">Captura de Tibucami</DialogTitle>
           {selectedImage && (
             <div className="relative aspect-video">
               <Image
                 src={selectedImage}
-                alt="Tibucami Screenshot"
+                alt="Captura de Tibucami"
                 fill
                 className="object-contain"
                 priority

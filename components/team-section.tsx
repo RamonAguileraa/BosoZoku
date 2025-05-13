@@ -43,7 +43,7 @@ export default function TeamSection() {
     {
       name: "Gabriel Muñoz",
       role: "Líder de Arte Ambiental",
-      image: "/placeholder.svg?height=200&width=200",
+      image: "/gabo.jpg?height=200&width=200",
       social: {
         github: "https://github.com/gabrielmunoz",
         linkedin: "https://www.linkedin.com/in/gabrielmunoz",
