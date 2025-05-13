@@ -21,7 +21,7 @@ export default function HeroSection() {
   return (
     <section
       id="top"
-      className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden perspective-1000"
+      className="relative min-h-[90vh] sm:min-h-screen flex items-center justify-center pt-16 pb-8 sm:pb-16 overflow-hidden perspective-1000"
       ref={containerRef}
     >
       {/* Fondo con efecto 3D */}
@@ -61,7 +61,7 @@ export default function HeroSection() {
 
         {/* Elementos flotantes 3D */}
         <motion.div
-          className="absolute top-1/4 left-1/4 w-64 h-64"
+          className="absolute top-1/4 left-1/4 w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64"
           animate={{
             rotateX: [0, 360],
             rotateY: [0, 360],
@@ -77,7 +77,7 @@ export default function HeroSection() {
         </motion.div>
 
         <motion.div
-          className="absolute bottom-1/4 right-1/4 w-48 h-48"
+          className="absolute bottom-1/4 right-1/4 w-24 h-24 sm:w-36 sm:h-36 md:w-48 md:h-48"
           animate={{
             rotateX: [360, 0],
             rotateY: [360, 0],
@@ -117,7 +117,7 @@ export default function HeroSection() {
           style={{ opacity }}
         >
           <motion.h1
-            className="text-7xl md:text-9xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-200"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-9xl font-bold mb-4 sm:mb-6 text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-200"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -129,24 +129,24 @@ export default function HeroSection() {
           </motion.h1>
 
           <motion.p
-            className="text-2xl md:text-3xl mb-12 text-amber-100/90 font-light tracking-wider"
+            className="text-xl sm:text-2xl md:text-3xl mb-8 sm:mb-12 text-amber-100/90 font-light tracking-wider"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Despierta el Espíritu. Abraza la Arcilla.
+            Despierta el Espíritu.
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-6 justify-center"
+            className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center"
           >
             <Button 
               asChild 
               size="lg" 
-              className="bg-amber-500 text-black hover:bg-amber-600 text-lg transform-gpu hover:scale-105 transition-transform"
+              className="bg-amber-500 text-black hover:bg-amber-600 text-base sm:text-lg transform-gpu hover:scale-105 transition-transform w-full sm:w-auto"
             >
               <Link href="#download">
                 <Download className="mr-2 h-5 w-5" />
@@ -157,7 +157,7 @@ export default function HeroSection() {
               asChild
               variant="outline"
               size="lg"
-              className="border-amber-500/50 text-amber-100 hover:bg-amber-500/10 text-lg transform-gpu hover:scale-105 transition-transform"
+              className="border-amber-500/50 text-amber-100 hover:bg-amber-500/10 text-base sm:text-lg transform-gpu hover:scale-105 transition-transform w-full sm:w-auto"
             >
               <Link href="#about">Conoce Más</Link>
             </Button>
@@ -167,7 +167,7 @@ export default function HeroSection() {
 
       {/* Indicador de scroll mejorado */}
       <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2"
         animate={{
           y: [0, 10, 0],
           opacity: [0.5, 1, 0.5],
@@ -178,7 +178,7 @@ export default function HeroSection() {
           ease: "easeInOut",
         }}
       >
-        <div className="w-6 h-10 border-2 border-amber-400 rounded-full flex justify-center">
+        <div className="w-5 h-8 sm:w-6 sm:h-10 border-2 border-amber-400 rounded-full flex justify-center">
           <motion.div
             className="w-1 h-2 bg-amber-400 rounded-full mt-2"
             animate={{

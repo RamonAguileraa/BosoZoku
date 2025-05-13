@@ -17,7 +17,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-3 group">
               <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-amber-500/50 group-hover:border-amber-500 transition-colors">
                 <Image
-                  src="/placeholder.svg?height=56&width=56"
+                  src="logoredesbosozoku.png?height=56&width=56"
                   alt="BosoZoku Logo"
                   fill
                   className="object-cover"
@@ -35,14 +35,16 @@ export default function Footer() {
               <Link href="https://discord.gg/bosozoku" target="_blank" className="text-gray-400 hover:text-amber-400 transition-colors transform hover:scale-110">
                 <Discord className="h-6 w-6" />
               </Link>
-              <Link href="https://twitter.com/bosozoku" target="_blank" className="text-gray-400 hover:text-amber-400 transition-colors transform hover:scale-110">
-                <Twitter className="h-6 w-6" />
-              </Link>
-              <Link href="https://instagram.com/bosozoku.studio" target="_blank" className="text-gray-400 hover:text-amber-400 transition-colors transform hover:scale-110">
+              <Link href="https://www.instagram.com/bosozoku.studio/" target="_blank" className="text-gray-400 hover:text-amber-400 transition-colors transform hover:scale-110">
                 <Instagram className="h-6 w-6" />
               </Link>
-              <Link href="https://youtube.com/@BosoZokuStudio" target="_blank" className="text-gray-400 hover:text-amber-400 transition-colors transform hover:scale-110">
+              <Link href="https://www.youtube.com/@BosoZoku.Studio" target="_blank" className="text-gray-400 hover:text-amber-400 transition-colors transform hover:scale-110">
                 <Youtube className="h-6 w-6" />
+              </Link>
+              <Link href="https://www.tiktok.com/@bosozoku.studio?lang=es" target="_blank" className="text-gray-400 hover:text-amber-400 transition-colors transform hover:scale-110">
+                <svg className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                </svg>
               </Link>
             </div>
           </div>
@@ -92,20 +94,20 @@ export default function Footer() {
                 <Mail className="h-5 w-5 text-amber-500 mt-1 group-hover:scale-110 transition-transform" />
                 <div>
                   <p className="text-gray-300">contact.bosozoku@gmail.com</p>
-                  <p className="text-gray-400 text-sm">Respuesta en 24h</p>
+                  <p className="text-gray-400 text-sm">Respuesta inmediata</p>
                 </div>
               </li>
               <li className="flex items-start gap-3 group">
                 <MapPin className="h-5 w-5 text-amber-500 mt-1 group-hover:scale-110 transition-transform" />
                 <div>
-                  <p className="text-gray-300">Monterrey, México</p>
+                  <p className="text-gray-300">Chihuahua, México</p>
                   <p className="text-gray-400 text-sm">Estudio Principal</p>
                 </div>
               </li>
               <li className="flex items-start gap-3 group">
                 <Phone className="h-5 w-5 text-amber-500 mt-1 group-hover:scale-110 transition-transform" />
                 <div>
-                  <p className="text-gray-300">+52 (81) 1234 5678</p>
+                  <p className="text-gray-300">+52 6143844441</p>
                   <p className="text-gray-400 text-sm">Lun-Vie 9:00-18:00</p>
                 </div>
               </li>
@@ -134,10 +136,12 @@ export default function Footer() {
               Política de Cookies
             </Link>
           </div>
-          <div className="flex items-center text-gray-400 text-sm">
+          <div className="flex items-center mr-16 text-gray-400 text-sm">
             <span>Hecho con</span>
             <Heart className="h-4 w-4 mx-1 text-amber-500 animate-pulse" />
-            <span>en el mundo de arcilla</span>
+            <span className="mr-2">|</span>
+            <span className="text-amber-400/80">Powered by</span>
+            <span className="ml-1 font-semibold bg-gradient-to-r from-amber-200 to-amber-400 bg-clip-text text-transparent">StudioKó</span>
           </div>
         </div>
       </div>

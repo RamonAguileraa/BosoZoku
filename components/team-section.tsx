@@ -25,9 +25,9 @@ export default function TeamSection() {
       role: "Líder de Desarrollo",
       image: "/dorle.jpg?height=200&width=200",
       social: {
-        github: "https://github.com/dorleperez",
+        github: "https://github.com/DorHann?tab=overview&from=2025-04-01&to=2025-04-30",
         linkedin: "https://www.linkedin.com/in/dorleperez",
-        instagram: "https://www.instagram.com/dorleperez"
+        instagram: "https://www.instagram.com/dorlehanniel/"
       },
     },
     {
