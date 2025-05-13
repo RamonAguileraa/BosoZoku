@@ -17,11 +17,12 @@ export default function Home() {
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src="/logoredesbosozoku.png?height=40&width=40"
+              src="/logoredesbosozoku.png"
               alt="BosoZoku Logo"
               width={40}
               height={40}
-              className="rounded-full"
+              priority
+              className="rounded-full object-cover"
             />
             <span className="font-bold text-xl">BosoZoku</span>
           </Link>

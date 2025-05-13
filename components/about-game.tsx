@@ -11,10 +11,10 @@ export default function AboutGame() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
   const screenshots = [
-    "/tohui.jpg?height=400&width=600",
-    "/cate.png?height=400&width=600",
-    "/scene1.jpg?height=400&width=600",
-    "/chabochi.jpg?height=400&width=600",
+    "/tohui.jpg",
+    "/cate.png",
+    "/scene1.jpg",
+    "/chabochi.jpg",
   ]
 
   return (
@@ -55,6 +55,7 @@ export default function AboutGame() {
               src="/iatibucami.png"
               alt="Tibucami Artwork"
               fill
+              priority
               className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -125,7 +126,7 @@ export default function AboutGame() {
                 onClick={() => setSelectedImage(src)}
               >
                 <Image
-                  src={src || "/iatibucami.png?height=400&width=600"}
+                  src={src}
                   alt={`Captura de Tibucami ${index + 1}`}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -154,8 +155,8 @@ export default function AboutGame() {
                 src={selectedImage}
                 alt="Captura de Tibucami"
                 fill
-                className="object-contain"
                 priority
+                className="object-contain"
               />
             </div>
           )}
