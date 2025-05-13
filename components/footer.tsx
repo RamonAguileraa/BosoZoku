@@ -17,10 +17,11 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-3 group">
               <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-amber-500/50 group-hover:border-amber-500 transition-colors">
                 <Image
-                  src="logoredesbosozoku.png?height=56&width=56"
+                  src="/logoredesbosozoku.png?height=56&width=56"
                   alt="BosoZoku Logo"
-                  fill
-                  className="object-cover"
+                  width={56}
+                  height={56}
+                  className="rounded-lg"
                 />
               </div>
               <div>
