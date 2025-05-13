@@ -15,9 +15,9 @@ export default function TeamSection() {
       role: "Director del Proyecto",
       image: "/yo.png?height=200&width=200",
       social: {
-        github: "https://github.com/ramonaguilera",
-        linkedin: "https://www.linkedin.com/in/ramonaguilera",
-        instagram: "https://www.instagram.com/ramonaguilera"
+        github: "https://github.com/RamonAguileraa",
+        linkedin: "https://www.linkedin.com/in/ram%C3%B3n-aguilera-95a2732a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+        instagram: "https://www.instagram.com/ramon_aguileraa?igsh=MXFnZWZ4czFkeDRhMw%3D%3D&utm_source=qr"
       },
     },
     {
