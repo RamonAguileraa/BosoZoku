@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
-import { Instagram, Linkedin, Github, ChevronLeft, ChevronRight } from "lucide-react"
+import { Instagram, Linkedin, Github, ChevronLeft, ChevronRight, Globe } from "lucide-react"
 import { useState } from "react"
 
 export default function TeamSection() {
@@ -17,7 +17,8 @@ export default function TeamSection() {
       social: {
         github: "https://github.com/RamonAguileraa",
         linkedin: "https://www.linkedin.com/in/ram%C3%B3n-aguilera-95a2732a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-        instagram: "https://www.instagram.com/ramon_aguileraa?igsh=MXFnZWZ4czFkeDRhMw%3D%3D&utm_source=qr"
+        instagram: "https://www.instagram.com/ramon_aguileraa?igsh=MXFnZWZ4czFkeDRhMw%3D%3D&utm_source=qr",
+        portfolio: "https://ramon-webdev.vercel.app"
       },
     },
     {
@@ -140,6 +141,15 @@ export default function TeamSection() {
             className="text-gray-400 hover:text-amber-400 transition-colors transform hover:scale-110 duration-200"
           >
             <Instagram className="h-6 w-6" />
+          </Link>
+        )}
+        {member.social.portfolio && (
+          <Link 
+            href={member.social.portfolio} 
+            target="_blank" 
+            className="text-gray-400 hover:text-amber-400 transition-colors transform hover:scale-110 duration-200"
+          >
+            <Globe className="h-6 w-6" />
           </Link>
         )}
       </div>
