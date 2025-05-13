@@ -7,23 +7,29 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Tibucami | BosoZoku Game Studio",
-  description:
-    "Awaken the Spirit. Embrace the Clay. Tibucami is a 3D action-adventure game inspired by Rarámuri mythology with a unique stop-motion clay aesthetic.",
+  title: "Tibucami - Juego de Acción y Aventura en 3D",
+  description: "Un juego de acción y aventura en 3D inspirado en la mitología Rarámuri y creado con una estética única de arcilla en stop-motion.",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || "https://tibucami.com"),
   keywords: ["Tibucami", "BosoZoku", "indie game", "action-adventure", "clay aesthetic", "Rarámuri mythology"],
   openGraph: {
-    title: "Tibucami | BosoZoku Game Studio",
-    description: "Awaken the Spirit. Embrace the Clay. A 3D action-adventure game with a unique clay aesthetic.",
+    title: "Tibucami - Juego de Acción y Aventura en 3D",
+    description: "Un juego de acción y aventura en 3D inspirado en la mitología Rarámuri y creado con una estética única de arcilla en stop-motion.",
     images: [
       {
-        url: "/logoredesbosozoku.png",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Tibucami Game",
-      },
-    ],
+        alt: "Tibucami - Juego de Acción y Aventura en 3D"
+      }
+    ]
   },
   generator: "v0.dev",
+  twitter: {
+    card: "summary_large_image",
+    title: "Tibucami - Juego de Acción y Aventura en 3D",
+    description: "Un juego de acción y aventura en 3D inspirado en la mitología Rarámuri y creado con una estética única de arcilla en stop-motion.",
+    images: ["/og-image.jpg"]
+  }
 }
 
 export default function RootLayout({
@@ -32,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="es" suppressHydrationWarning>
       <body className={`${inter.className} scroll-smooth`}>
         <ThemeProvider
           attribute="class"
