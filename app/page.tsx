@@ -9,10 +9,22 @@ import SupportSection from "@/components/support-section"
 import TeamSection from "@/components/team-section"
 import CommunitySection from "@/components/community-section"
 import Footer from "@/components/footer"
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const menuRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setIsMenuOpen(false)
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => document.removeEventListener("mousedown", handleClickOutside)
+  }, [])
 
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
@@ -39,7 +51,10 @@ export default function Home() {
           </button>
 
           {/* Menú de navegación */}
-          <nav className={`md:flex items-center gap-8 ${isMenuOpen ? 'flex flex-col absolute top-full left-0 right-0 bg-black/90 backdrop-blur-md p-4' : 'hidden'}`}>
+          <nav
+            ref={menuRef}
+            className={`md:flex items-center gap-8 ${isMenuOpen ? 'flex flex-col absolute top-full left-0 right-0 bg-black/90 backdrop-blur-md p-4 transition-all duration-300 ease-in-out' : 'hidden'}`}
+          >
             <Link href="#about" className="hover:text-amber-400 transition-colors" onClick={() => setIsMenuOpen(false)}>About</Link>
             <Link href="#download" className="hover:text-amber-400 transition-colors" onClick={() => setIsMenuOpen(false)}>Download</Link>
             <Link href="#support" className="hover:text-amber-400 transition-colors" onClick={() => setIsMenuOpen(false)}>Support</Link>
