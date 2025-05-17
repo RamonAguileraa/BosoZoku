@@ -1,4 +1,4 @@
-import { Download, Heart, ChevronDown } from "lucide-react"
+import { Download, Heart, ChevronDown, Menu, X } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -9,8 +9,11 @@ import SupportSection from "@/components/support-section"
 import TeamSection from "@/components/team-section"
 import CommunitySection from "@/components/community-section"
 import Footer from "@/components/footer"
+import { useState } from "react"
 
 export default function Home() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
       <header className="fixed top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-md border-b border-white/10">
@@ -27,22 +30,21 @@ export default function Home() {
             <span className="font-bold text-xl">BosoZoku</span>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-8">
-            <Link href="#about" className="hover:text-amber-400 transition-colors">
-              About
-            </Link>
-            <Link href="#download" className="hover:text-amber-400 transition-colors">
-              Download
-            </Link>
-            <Link href="#support" className="hover:text-amber-400 transition-colors">
-              Support
-            </Link>
-            <Link href="#team" className="hover:text-amber-400 transition-colors">
-              Team
-            </Link>
-            <Link href="#community" className="hover:text-amber-400 transition-colors">
-              Community
-            </Link>
+          {/* Menú hamburguesa para móvil */}
+          <button
+            className="md:hidden text-white"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+
+          {/* Menú de navegación */}
+          <nav className={`md:flex items-center gap-8 ${isMenuOpen ? 'flex flex-col absolute top-full left-0 right-0 bg-black/90 backdrop-blur-md p-4' : 'hidden'}`}>
+            <Link href="#about" className="hover:text-amber-400 transition-colors" onClick={() => setIsMenuOpen(false)}>About</Link>
+            <Link href="#download" className="hover:text-amber-400 transition-colors" onClick={() => setIsMenuOpen(false)}>Download</Link>
+            <Link href="#support" className="hover:text-amber-400 transition-colors" onClick={() => setIsMenuOpen(false)}>Support</Link>
+            <Link href="#team" className="hover:text-amber-400 transition-colors" onClick={() => setIsMenuOpen(false)}>Team</Link>
+            <Link href="#community" className="hover:text-amber-400 transition-colors" onClick={() => setIsMenuOpen(false)}>Community</Link>
           </nav>
 
           <div className="flex items-center gap-4">
